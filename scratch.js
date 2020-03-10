@@ -29,8 +29,20 @@ let row2 = new Element("div","row","title_row");
 console.log(row2);
 let column2 = new Element("div","col-6","player_1_column");
 console.log(column2);
-let 
+let player1title = new Element("h2","","player_1_name").innerHTML = "Player 1";
+console.log(player1title);
+let px = new Element("p","","p1_marker_indicator").innerHTML = "X"
+console.log(px);
 let column3 = new Element("div","col-6","player_2_column");
+console.log(column3);
+let player2title = new Element("h2","","player_2_name").innerHTML = "Player 2";
+console.log(player2title);
+let px2 = new Element("p","","p2_marker_indicator").innerHTML = "O"
+console.log(px2);
+let container2 = new Element("div","container","grid");
+console.log(container);
+
+
 
 
 add(document.body, element1);
