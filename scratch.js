@@ -16,22 +16,7 @@ function Element(element, classList, id) {
 Element.prototype.constructor = Element;
 
 
-// function mark() {
-//     // let symbol = function symbol() {if (turn==1){"<h4>X</h4>"} else {"<h4>O</h4>"};}
-
-
-// }
-
-// function draw() {
-//     board.forEach(function (mark, index) {
-//         tiles[index].textContent = mark;
-//     })
-// }
-
-// function boardStatus() {
-    // draw();
-// }
-// boardStatus();
+// Stores all moves on board
 board = [
     "", "", "",
     "", "", "",
@@ -98,8 +83,6 @@ function buildPage() {
 
     button.element.appendChild(buttonTXT);
     add(container2, button);
-    // add(gridRow, gridCol);
-    // add(container2, gridRow);
     add(column2, player1title);
     add(column2, px);
     add(row2, column2);
@@ -118,7 +101,7 @@ function buildPage() {
     document.getElementById("p1_marker_indicator").innerHTML = "X"
     document.getElementById("player_2_name").innerHTML = "Player 2";
     document.getElementById("p2_marker_indicator").innerHTML = "O"
-    // document.getElementById("gridCol_0_0").innerHTML = "MARK";
+
 
 }
 
@@ -167,16 +150,7 @@ winBoard = [
     [2,4,6]
 ];
 
-// function checkWin(){
-//     for (i=0; i<winBoard.length; i++){
-//         for (j=0; j<3; j++){
-
-//             let boardDex = winBoard[i][j];
-//             if (turn == board[boardDex]){console.log(boardDex);
-
-//     }}}
-// }
-
+// Check for a win
 function checkWin2(){
     for(i=0;i<winBoard.length;i++){
         if(turn==board[winBoard[i][0]] && turn==board[winBoard[i][1]] && turn==board[winBoard[i][2]]){
@@ -191,6 +165,8 @@ function checkWin2(){
     }
 }
 
+
+// Reset the board
 function reset(){
     for(i=0; i<3; i++){
         for(j=0; j<3; j++){
@@ -209,36 +185,5 @@ function reset(){
     turn = "X";
 }
 
-// function checkWin3(){
-//     for(i=0;i<winBoard.length;i++){
-//         win=true;
-//         for(j=0;j<winBoard[i].length;j++){
-//             if(turn!=board[i][j]){
-//                 win=false;
-//             }
-//         }
-//         if(win){
-//             console.log("win");
-//         }
-//     }
-// }
-// does character in board at winboard equal turn
-
-
-
-
-// moves = [];
-// var grid = document.getElementById("gridRow");
-// var tiles = Array.from(forEach(grid.querySelectorAll("div")));
-// console.log(tiles);
-
-// Create all possible win conditions as an array of arrays
-
-
-// // check win or tie
-// for (n=0; n<3; n++){
-//     if (turn == [0,n] || [1,n] || [2,n] || [n,0] || [n,1] || [n,2] || [n,n] || [n,2-n]){win}
-//     else if (state == end){tie}
-// }
 
 
